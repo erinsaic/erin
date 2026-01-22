@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naeri's Study Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Naeri's Study Planner</h1>
+        <p class="subtitle">Planner for 2nd Semester</p>
+        <button id="toggle-theme">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+        <!-- Subjects -->
+        <section class="card">
+            <h2>Subjects Today</h2>
+            <ul id="subjects">
+                <li>CONPHILARTS</li>
+                <li>ENGACPROF</li>
+                <li>GENERAL PHYSICS 2</li>
+                <li>GENERAL BIOLOGY 2</li>
+                <li>WORK IMMERSION</li>
+                <li>RESEARCH PROJECT</li>
+                <li>ENTREPRENEURSHIP</li>
+            </ul>
+        </section>
+
+        <!-- Homework -->
+        <section class="card">
+            <h2>Homework</h2>
+            <ul id="homework">
+                <li><label><input type="checkbox" data-id="CONPHILARTS PT"><span>CONPHILARTS PT</span></label></li>
+                <li><label><input type="checkbox" data-id="EAPP QUIZ AND PT"><span>EAPP QUIZ AND PT</span></label></li>
+                <li><label><input type="checkbox" data-id="PHYSICS PT"><span>PHYSICS PT</span></label></li>
+            </ul>
+            <input type="text" id="new-homework" placeholder="Add new homework">
+            <button id="add-homework">Add</button>
+        </section>
+
+        <!-- Goals -->
+        <section class="card">
+            <h2>Goals Today</h2>
+            <ul id="goals">
+                <li><label><input type="checkbox" data-id="Finish all notes"><span>Finish all notes</span></label></li>
+                <li><label><input type="checkbox" data-id="Review for Quizzes"><span>Review for Quizzes</span></label></li>
+                <li><label><input type="checkbox" data-id="Sleep Early"><span>Sleep Early</span></label></li>
+            </ul>
+            <input type="text" id="new-goal" placeholder="Add a new goal">
+            <button id="add-goal">Add</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6ebf7;
+    color: #0d1b2a;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #0d1b2a;
+    color: #ffffff;
+}
+
+body.dark .card {
+    background-color: #1c2a4a;
+    color: #e6ebf7;
+}
+
+body.dark input[type="checkbox"] {
+    accent-color: #e6ebf7;
+}
+
+body.dark header h1,
+body.dark header .subtitle {
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0d1b2a;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #1c2a4a;
+}
+
+#toggle-theme {
+    margin-top: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #1c2a4a;
+    color: #e6ebf7;
+    border: none;
+    border-radius: 5px;
+}
+
+#toggle-theme:hover {
+    background-color: #0d1b2a;
+}
+
+.card {
+    background-color: #1c2a4a;
+    width: 100%;
+    max-width: 600px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+    color: #e6ebf7;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #e6ebf7;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e6ebf7;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #e6ebf7;
+    margin-right: 12px;
+}
+
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #a3b4d1;
+    opacity: 0.7;
+}
+
+.remove-task {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #e6ebf7;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.remove-task:hover {
+    color: #ff6b6b;
+}
+
+#new-goal, #new-homework {
+    padding: 8px;
+    width: 70%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #e6ebf7;
+    background-color: #1c2a4a;
+    color: #e6ebf7;
+}
+
+#add-goal, #add-homework {
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #0d1b2a;
+    color: #e6ebf7;
+}
+
+#add-goal:hover, #add-homework:hover {
+    background-color: #1c2a4a;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+    #new-goal, #new-homework {
+        width: 60%;
+    }
+}
+/* Responsive for mobile phones */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .card {
+        width: 100%; /* full width on small screens */
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #new-goal, #new-homework {
+        width: 65%; /* inputs fit smaller screen */
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #add-goal, #add-homework, #toggle-theme {
+        padding: 10px 14px; /* easier to tap */
+        font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    li {
+        font-size: 18px; /* easier to read */
+    }
+}
+
+/* Scrollable lists if too long */
+ul {
+    max-height: 300px; /* optional limit */
+    overflow-y: auto;
+    padding-right: 5px;
+}
