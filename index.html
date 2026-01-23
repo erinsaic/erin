@@ -3,56 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Naeri's Study Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Naeri's Study Planner</h1>
-        <p class="subtitle">Planner for 2nd Semester</p>
+<header>
+    <h1>Naeri's Study Planner</h1>
+    <p class="subtitle">Planner for 2nd Semester</p>
+
+    <div class="top-controls">
         <button id="toggle-theme">🌙 Dark Mode</button>
-    </header>
+    </div>
 
-    <main>
-        <!-- Subjects -->
-        <section class="card">
-            <h2>Subjects Today</h2>
-            <ul id="subjects">
-                <li>CONPHILARTS</li>
-                <li>ENGACPROF</li>
-                <li>GENERAL PHYSICS 2</li>
-                <li>GENERAL BIOLOGY 2</li>
-                <li>WORK IMMERSION</li>
-                <li>RESEARCH PROJECT</li>
-                <li>ENTREPRENEURSHIP</li>
-            </ul>
-        </section>
+    <!-- SEARCH BAR -->
+    <input type="text" id="search-tasks" placeholder="Search homework/goals..." style="margin-top:10px; padding:6px 10px; width: 80%; max-width: 400px; border-radius:5px; border:1px solid #e6ebf7; background-color:#1c2a4a; color:#e6ebf7;">
 
-        <!-- Homework -->
-        <section class="card">
-            <h2>Homework</h2>
-            <ul id="homework">
-                <li><label><input type="checkbox" data-id="CONPHILARTS PT"><span>CONPHILARTS PT</span></label></li>
-                <li><label><input type="checkbox" data-id="EAPP QUIZ AND PT"><span>EAPP QUIZ AND PT</span></label></li>
-                <li><label><input type="checkbox" data-id="PHYSICS PT"><span>PHYSICS PT</span></label></li>
-            </ul>
-            <input type="text" id="new-homework" placeholder="Add new homework">
-            <button id="add-homework">Add</button>
-        </section>
+    <div class="progress-wrap">
+        <div id="progress-bar"></div>
+    </div>
+    <p id="progress-text">0% completed</p>
+</header>
 
-        <!-- Goals -->
-        <section class="card">
-            <h2>Goals Today</h2>
-            <ul id="goals">
-                <li><label><input type="checkbox" data-id="Finish all notes"><span>Finish all notes</span></label></li>
-                <li><label><input type="checkbox" data-id="Review for Quizzes"><span>Review for Quizzes</span></label></li>
-                <li><label><input type="checkbox" data-id="Sleep Early"><span>Sleep Early</span></label></li>
-            </ul>
-            <input type="text" id="new-goal" placeholder="Add a new goal">
-            <button id="add-goal">Add</button>
-        </section>
-    </main>
+<main>
 
-    <script src="script.js"></script>
+    <!-- Subjects -->
+    <section class="card">
+        <h2>Subjects Today</h2>
+        <ul>
+            <li>CONPHILARTS</li>
+            <li>ENGACPROF</li>
+            <li>GENERAL PHYSICS 2</li>
+            <li>GENERAL BIOLOGY 2</li>
+            <li>WORK IMMERSION</li>
+            <li>RESEARCH PROJECT</li>
+            <li>ENTREPRENEURSHIP</li>
+        </ul>
+    </section>
+
+    <!-- Homework -->
+    <section class="card">
+        <h2>Homework</h2>
+        <ul id="homework"></ul>
+
+        <input type="text" id="new-homework" placeholder="Add new homework">
+        <input type="text" id="hw-notes" placeholder="Add notes (optional)" style="margin-top:5px;">
+        <select id="hw-priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+        <button id="add-homework">Add</button>
+    </section>
+
+    <!-- Goals -->
+    <section class="card">
+        <h2>Goals Today</h2>
+        <ul id="goals"></ul>
+        <input type="text" id="new-goal" placeholder="Add new goal">
+        <input type="text" id="goal-notes" placeholder="Add notes (optional)" style="margin-top:5px;">
+        <button id="add-goal">Add</button>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
